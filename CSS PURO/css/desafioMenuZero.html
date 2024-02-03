@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -55,6 +56,7 @@
         .menu ul {
             margin: 0;
             padding: 0;
+            display: inline-block;
         }
 
         .menu li {
@@ -69,48 +71,13 @@
         }
 
         .menu a {
-            padding: 15px;
+            padding: 10px;
         }
 
         .autenticacao {
             float: right;
             height: 80px;
             padding: 25px;
-        }
-
-        .menu a:hover,
-        .menu a.selected {
-            background-color: #4faddb;
-            color: #000;
-        }
-
-        .botao {
-            border-radius: 30px;
-            padding: 10px 25px;
-            margin: 10px;
-        }
-
-        .destaque {
-            background: #f50a31;
-            color: #fff;
-        }
-
-        @media(min-width: 679px){
-            .menu-toggle {
-                display: none;
-            }
-        }
-
-        @media(max-width: 680px){
-            .menu {
-                display: none;
-            }
-        }
-
-        @media(max-width: 910px){
-            .autenticacao {
-                display: none;
-            }
         }
 
     </style>
@@ -149,16 +116,6 @@
     </header>
 
     <script>
-        window.onhashchange = function(e) {
-            const oldURL = e.oldURL.split('#')[1]
-            const newURL = e.newURL.split('#')[1]
-            
-            const oldLink = document.querySelector(`.menu a[href='#${oldURL}']`)
-            const newLink = document.querySelector(`.menu a[href='#${newURL}']`)
-            oldLink && oldLink.classList.remove('selected')
-            newLink && newLink.classList.add('selected')
-
-        }
     </script>
 </body>
 
